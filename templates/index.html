@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% comment %} <link rel="stylesheet" href="{% style.css %}"> {% endcomment %}
+
+{% load static %}
+{% block title %}
+    cat 
+{% endblock %}
+
+
+ {% block content %}
+    <form action="cat_stats/">
+        {% csrf_token %}
+        <p>Вас приветствует симулятор кота</p>
+        <p>для начала введите имя кота</p>
+        <input type="text" name="cat_name"><br>
+        <input type="submit" class="inp_mg">
+    </form>
+
+
+{% endblock %}

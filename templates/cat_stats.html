@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    cat_stats 
+{% endblock %}
+
+
+ {% block content %}
+    <img src="{{ img_url }}" width="350" height="250" alt="cat">
+
+    <p>Кот - {{ name }}</p>
+    <p>Возраст - {{ age }}</p>
+    <p>Уровень счастья - {{ mood }}</p>
+    <p>Уровень сытости - {{ satiety }}</p>
+
+     
+    <form action="/cat_stats/" method="POST">
+        {% csrf_token %}
+        
+        <p><select name="action">
+            <option value="feed">Покормить кота</option>
+            <option value="play">Поиграть с котом</option>
+            <option value="sleep">Уложить спать кота</option>
+          </select></p>
+          <p><input type="submit" value="Подтвердить"></p>
+    </form>
+
+<a href="/">Home</a>
+
+{% endblock %}
