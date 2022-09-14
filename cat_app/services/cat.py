@@ -2,8 +2,8 @@ import json
 from random import randint
 
 IMG_URL = {
-    'sleep': 'https://images.pexels.com/photos/969147/pexels-photo-969147.jpeg?cs=srgb&dl=pexels-grace-robertson-969147.jpg&fm=jpg',
-    'not_sleep': 'https://idsb.tmgrup.com.tr/ly/uploads/images/2021/09/08/thumbs/800x531/142774.jpg'
+    'sleep': 'img/sleep.jpg',
+    'not_sleep': 'img/not_sleep.jpg'
 }
 
 

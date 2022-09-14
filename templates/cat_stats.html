@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
+{% load static %}
 {% block title %}
-    cat_stats 
+    Статистика кота 
 {% endblock %}
 
 
  {% block content %}
-    <img src="{{ img_url }}" width="350" height="250" alt="cat">
-
+    <img src="{% static img_url %}" width="350" alt="cat">
+    
     <p>Кот - {{ name }}</p>
     <p>Возраст - {{ age }}</p>
     <p>Уровень счастья - {{ mood }}</p>
